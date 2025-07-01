@@ -87,6 +87,17 @@
         .skill-card {
           text-align: center;
         }
+        .project-card a.project-link {
+          display: block;
+          color: inherit;
+          text-decoration: none;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card a.project-link:hover {
+          transform: scale(1.03);
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
 
         .skill-card img {
           width: 80px;
@@ -357,30 +368,66 @@
           </article>
 
           <!-- Projects -->
+          <!-- Projects -->
           <article id="work">
             <h2 class="major">Projects</h2>
             <div class="project-grid">
               <div class="project-card">
-                <img src="images/lms (2).png" alt="LMS Project" />
-                <h3>Learning Management System</h3>
-                <p>
-                  MERN Stack + Stripe integration for online course management
-                </p>
+                <a
+                  href="https://tea-with-code.vercel.app/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <img src="images/lms (2).png" alt="LMS Project" />
+                  <h3>Learning Management System</h3>
+                  <p>
+                    A full-featured MERN Stack LMS with course creation, Stripe
+                    payment integration, authentication, and responsive UI for
+                    online learning.
+                  </p>
+                </a>
               </div>
               <div class="project-card">
-                <img src="images/ride.png" alt="Ride Booking App" />
-                <h3>Ride Booking App</h3>
-                <p>React + GSAP powered animated ride booking interface</p>
+                <a
+                  href="https://guestian.onrender.com/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <img src="images/ride.png" alt="Ride Booking App" />
+                  <h3>Ride Booking App</h3>
+                  <p>
+                    A React-based animated interface using GSAP for booking
+                    rides with a user-friendly experience.
+                  </p>
+                </a>
               </div>
               <div class="project-card">
-                <img src="images/food.png" alt="Food-Order" />
-                <h3>BituBuzz</h3>
-                <p>MERN + React Native</p>
+                <a
+                  href="https://bite-buzz-tan.vercel.app/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <img src="images/food.png" alt="Food-Order" />
+                  <h3>BituBuzz</h3>
+                  <p>
+                    MERN food delivery and listing application for small
+                    businesses.
+                  </p>
+                </a>
               </div>
               <div class="project-card">
-                <img src="images/tt.jfif" alt="Timetable System" />
-                <h3>Timetable Management System</h3>
-                <p>Admin panel with smart schedule conflict prevention</p>
+                <a
+                  href="https://your-timetable-system-link.com"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <img src="images/tt.jfif" alt="Timetable System" />
+                  <h3>Timetable Management System</h3>
+                  <p>
+                    Admin dashboard with schedule conflict detection and teacher
+                    allocation management.
+                  </p>
+                </a>
               </div>
             </div>
           </article>
