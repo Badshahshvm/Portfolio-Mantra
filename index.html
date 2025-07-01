@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shivam Raj | Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Global Styles */
+      body {
+        color: #e0e0e0;
+        background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #4fd1c5;
+      }
+
+      a {
+        color: #4fd1c5;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Logo Image */
+      .logo img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #4fd1c5;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s;
+      }
+
+      .logo img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Section Grids */
+      .project-grid,
+      .experience-grid,
+      .education-grid,
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      /* Card Styles */
+      .project-card,
+      .experience-card,
+      .education-card,
+      .skill-card {
+        background: linear-gradient(145deg, #1f1f2f, #2a2a3c);
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project-card:hover,
+      .experience-card:hover,
+      .education-card:hover,
+      .skill-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .skill-card {
+        text-align: center;
+      }
+
+      .skill-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        border: 2px solid #4fd1c5;
+        background: #ffffff;
+      }
+
+      /* About Image */
+      .about-img {
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #4fd1c5;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .about-img:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Header Content */
+      header#header {
+        padding: 2rem;
+        text-align: center;
+        background: #1c1c2b;
+        border-bottom: 2px solid #4fd1c5;
+      }
+
+      header .content p {
+        color: #cccccc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      nav ul li a {
+        background: #4fd1c5;
+        color: #121212;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        transition: background 0.3s;
+      }
+
+      nav ul li a:hover {
+        background: #38b2ac;
+      }
+
+      /* Contact Form */
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        border: 1px solid #4fd1c5;
+        background-color: #1e1e2f;
+        color: #e0e0e0;
+      }
+
+      form input:focus,
+      form textarea:focus {
+        outline: none;
+        border-color: #38b2ac;
+      }
+
+      .primary {
+        background: #4fd1c5;
+        color: #121212;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.2rem;
+        cursor: pointer;
+      }
+
+      .primary:hover {
+        background: #38b2ac;
+      }
+
+      /* Footer */
+      #footer {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: #1c1c2b;
+        color: #888;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <div class="logo">
+          <span class="icon fa-user"></span>
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>Shivam Kumar</h1>
+            <p>
+              A passionate Full-Stack Developer with expertise in the MERN Stack
+              and React Native, a Cybersecurity Enthusiast, and a strong
+              problem-solver who enjoys building efficient, scalable, and secure
+              web and mobile applications.
+            </p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div id="main">
+        <!-- Skills -->
+        <article id="skills">
+          <h2 class="major">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="images/reactjs.png" alt="React" />
+              <p>React</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/sql.png" alt="Node.js" />
+              <p>SQL</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download (3).png" alt="MongoDB" />
+              <p>MongoDB</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/expressjs.png" alt="Express" />
+              <p>Express</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/github.jfif" alt="Github" />
+              <p>Github</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download (2).png" alt="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download.png" alt="CSS" />
+              <p>HTML</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download (1).png" alt="CSS" />
+              <p>CSS</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Education -->
+        <article id="education">
+          <h2 class="major">Education</h2>
+          <div class="education-grid">
+            <div class="education-card">
+              <h3>B.Tech in Information Technology</h3>
+              <h4>M.I.T Muzaffarpur</h4>
+              <p>CGPA: &nbsp; 7.94</p>
+            </div>
+            <div class="education-card">
+              <h3>Intermediate (12th)</h3>
+              <h4>K.L.S College</h4>
+              <p>Percentage: 84.2%</p>
+            </div>
+            <div class="education-card">
+              <h3>Matriculation (10th)</h3>
+              <h4>Bapu High School</h4>
+              <p>Percentage: 74%</p>
+            </div>
+          </div>
+        </article>
+        <!-- Resume -->
+        <article id="resume">
+          <h2 class="major">Resume</h2>
+          <div class="resume-section">
+            <p>You can view or download my resume here:</p>
+            <a
+              href="assets/MyResume2.pdf"
+              download="Shivam_Kumar_Resume"
+              class="resume-button"
+            >
+              📄 Download Resume (PDF)
+            </a>
+          </div>
+        </article>
+
+        <!-- Projects -->
+        <article id="work">
+          <h2 class="major">Projects</h2>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="images/lms (2).png" alt="LMS Project" />
+              <h3>Learning Management System</h3>
+              <p>
+                MERN Stack + Stripe integration for online course management
+              </p>
+            </div>
+            <div class="project-card">
+              <img src="images/ride.png" alt="Ride Booking App" />
+              <h3>Ride Booking App</h3>
+              <p>React + GSAP powered animated ride booking interface</p>
+            </div>
+            <div class="project-card">
+              <img src="images/food.png" alt="Food-Order" />
+              <h3>BituBuzz</h3>
+              <p>MERN + React Native</p>
+            </div>
+            <div class="project-card">
+              <img src="images/tt.jfif" alt="Timetable System" />
+              <h3>Timetable Management System</h3>
+              <p>Admin panel with smart schedule conflict prevention</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Experience -->
+        <article id="experience">
+          <h2 class="major">Experience</h2>
+          <div class="experience-grid">
+            <div class="experience-card">
+              <h3>Software Developer Intern</h3>
+              <p><strong>Company:</strong> Bluestck Fintech</p>
+              <p><strong>Duration:</strong> Jan 2025 – Feb 2025</p>
+            </div>
+            <div class="experience-card">
+              <h3>Backend Developer</h3>
+              <p><strong>Company:</strong> Near</p>
+              <p><strong>Duration:</strong> Feb 2025 – May 2025</p>
+            </div>
+            <div class="experience-card">
+              <h3>Graduate Engineer Trainee</h3>
+              <p><strong>Company:</strong> Mantra Softech</p>
+              <p><strong>Duration:</strong> June 2025 – Present</p>
+            </div>
+          </div>
+        </article>
+        <!-- About -->
+        <article id="about">
+          <h2 class="major">About Me</h2>
+          <span class="image main">
+            <img src="images/mypic.jfif" alt="About Me" class="about-img" />
+          </span>
+          <p>
+            My name is Shivam Kumar, an IT graduate from Muzaffarpur Institute
+            of Technology. I am passionate about web and mobile development,
+            cybersecurity, and building real-world solutions.
+          </p>
+          <p><strong>Technical Skills:</strong></p>
+          <ul>
+            <li>Frontend: React, Tailwind CSS</li>
+            <li>Backend: Node.js, Express.js</li>
+            <li>Database: MongoDB</li>
+            <li>Mobile Development: React Native (basic knowledge)</li>
+            <li>Tools & Practices: Git, REST APIs, MVC architecture</li>
+          </ul>
+          <p><strong>Projects:</strong></p>
+          <ul>
+            <li>Tour Booking App</li>
+            <li>Timetable Management System</li>
+            <li>Student Problem-Solving Portal</li>
+            <li>Social Media Platform with AR/VR integration</li>
+          </ul>
+          <p><strong>Other Interests & Strengths:</strong></p>
+          <ul>
+            <li>Cybersecurity fundamentals and ethical hacking</li>
+            <li>Active LeetCode user with recognition for coding challenges</li>
+            <li>Strong problem-solving and debugging skills</li>
+            <li>Goal-oriented and dedicated to full-stack development</li>
+            <li>Focus on building secure and scalable digital solutions</li>
+          </ul>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact">
+          <h2 class="major">Get in Touch</h2>
+          <form
+            method="post"
+            action="mailto:your-shivamraj7479@example.com"
+            enctype="text/plain"
+          >
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input type="submit" value="Send Message" class="primary" />
+              </li>
+              <li><input type="reset" value="Reset" /></li>
+            </ul>
+          </form>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://twitter.com/yourhandle"
+                class="icon brands fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://facebook.com/yourhandle"
+                class="icon brands fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/yourhandle"
+                class="icon brands fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Badshahshvm"
+                class="icon brands fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:your-shivamraj7479@.com"
+                class="icon solid fa-envelope"
+                ><span class="label">Email</span></a
+              >
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <footer id="footer">
+        <p class="copyright">&copy; 2025 Shivam Kumar</p>
+      </footer>
+    </div>
+
+    <div id="bg"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
