@@ -1,522 +1,526 @@
 <!DOCTYPE html>
 <html>
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Shivam Raj | Portfolio</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="stylesheet" href="assets/css/main.css" />
-      <style>
-        /* Global Styles */
-        body {
-          color: #e0e0e0;
-          background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <head>
+    <title>Shivam Raj | Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Global Styles */
+      body {
+        color: #e0e0e0;
+        background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-        h1,
-        h2,
-        h3,
-        h4 {
-          color: #4fd1c5;
-        }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #4fd1c5;
+      }
 
-        a {
-          color: #4fd1c5;
-          text-decoration: none;
-        }
+      a {
+        color: #4fd1c5;
+        text-decoration: none;
+      }
 
-        a:hover {
-          text-decoration: underline;
-        }
+      a:hover {
+        text-decoration: underline;
+      }
 
-        /* Logo Image */
+      /* Logo */
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 20vw;
+        max-width: 100px;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s;
+        margin-bottom: 15px;
+      }
+
+      .logo img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Responsive Logo Sizes */
+      @media (max-width: 768px) {
         .logo img {
-          width: 82px;
-          height: 80px;
-          border-radius: 50%;
-          object-fit: cover;
-          border: 2px none;
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-          transition: transform 0.3s;
-
-          margin-bottom: 15px;
+          max-width: 80px;
         }
+      }
 
-        .logo img:hover {
-          transform: scale(1.1);
+      @media (max-width: 480px) {
+        .logo img {
+          max-width: 60px;
         }
+      }
 
-        /* Section Grids */
-        .project-grid,
-        .experience-grid,
-        .education-grid,
-        .skills-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 2rem;
+      /* Section Grids */
+      .project-grid,
+      .experience-grid,
+      .education-grid,
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      /* Card Styles */
+      .project-card,
+      .experience-card,
+      .education-card,
+      .skill-card {
+        background: linear-gradient(145deg, #1f1f2f, #2a2a3c);
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project-card:hover,
+      .experience-card:hover,
+      .education-card:hover,
+      .skill-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .skill-card {
+        text-align: center;
+      }
+
+      .project-card a.project-link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card a.project-link:hover {
+        transform: scale(1.03);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      .skill-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+        border: 2px solid #4fd1c5;
+        background: #ffffff;
+      }
+
+      .highlight-skill {
+        border: 2px solid #fff;
+        background: #4fd1c5;
+        color: #000;
+      }
+
+      .about-img {
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #4fd1c5;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .about-img:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      header#header {
+        padding: 2rem;
+        text-align: center;
+        background: #1c1c2b;
+        border-bottom: 2px solid #4fd1c5;
+      }
+
+      header .content p {
+        color: #cccccc;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      nav ul li a {
+        background: #4fd1c5;
+        color: #121212;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        transition: background 0.3s;
+      }
+
+      nav ul li a:hover {
+        background: #38b2ac;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        border: 1px solid #4fd1c5;
+        background-color: #1e1e2f;
+        color: #e0e0e0;
+      }
+
+      form input:focus,
+      form textarea:focus {
+        outline: none;
+        border-color: #38b2ac;
+      }
+
+      .primary {
+        background: #4fd1c5;
+        color: #121212;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.2rem;
+        cursor: pointer;
+      }
+
+      .primary:hover {
+        background: #38b2ac;
+      }
+
+      #footer {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: #1c1c2b;
+        color: #888;
+        font-size: 0.9rem;
+      }
+
+      .animated-name {
+        display: inline-block;
+        font-size: 2.5rem;
+        animation: fadeScaleIn 1.2s ease-in-out;
+      }
+
+      @keyframes fadeScaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
         }
-
-        /* Card Styles */
-        .project-card,
-        .experience-card,
-        .education-card,
-        .skill-card {
-          background: linear-gradient(145deg, #1f1f2f, #2a2a3c);
-          border-radius: 15px;
-          padding: 1.5rem;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-          transition: transform 0.3s, box-shadow 0.3s;
+        to {
+          opacity: 1;
+          transform: scale(1);
         }
+      }
+    </style>
 
-        .project-card:hover,
-        .experience-card:hover,
-        .education-card:hover,
-        .skill-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        .project-card img {
-          width: 100%;
-          height: 180px;
-          object-fit: cover;
-          border-radius: 10px;
-          margin-bottom: 1rem;
-        }
-
-        .skill-card {
-          text-align: center;
-        }
-        .project-card a.project-link {
-          display: block;
-          color: inherit;
-          text-decoration: none;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card a.project-link:hover {
-          transform: scale(1.03);
-          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-        }
-
-        .skill-card img {
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
-          margin-bottom: 0.5rem;
-          border: 2px solid #4fd1c5;
-          background: #ffffff;
-        }
-
-        /* Highlight Skill on Click */
-        .highlight-skill {
-          border: 2px solid #fff;
-          background: #4fd1c5;
-          color: #000;
-        }
-
-        /* About Image */
-        .about-img {
-          object-fit: cover;
-          border-radius: 50%;
-          border: 4px solid #4fd1c5;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          display: block;
-          margin: 0 auto 1.5rem auto;
-        }
-
-        .about-img:hover {
-          transform: scale(1.05) rotate(1deg);
-          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Header Content */
-        header#header {
-          padding: 2rem;
-          text-align: center;
-          background: #1c1c2b;
-          border-bottom: 2px solid #4fd1c5;
-        }
-
-        header .content p {
-          color: #cccccc;
-          font-size: 1.1rem;
-          line-height: 1.6;
-        }
-
-        nav ul {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 1rem;
-          margin-top: 1rem;
-        }
-
-        nav ul li a {
-          background: #4fd1c5;
-          color: #121212;
-          padding: 0.5rem 1rem;
-          border-radius: 20px;
-          transition: background 0.3s;
-        }
-
-        nav ul li a:hover {
-          background: #38b2ac;
-        }
-
-        /* Contact Form */
-        form input,
-        form textarea {
-          width: 100%;
-          padding: 0.75rem;
-          margin-bottom: 1rem;
-          border-radius: 8px;
-          border: 1px solid #4fd1c5;
-          background-color: #1e1e2f;
-          color: #e0e0e0;
-        }
-
-        form input:focus,
-        form textarea:focus {
-          outline: none;
-          border-color: #38b2ac;
-        }
-
-        .primary {
-          background: #4fd1c5;
-          color: #121212;
-          border: none;
-          border-radius: 10px;
-          padding: 0.6rem 1.2rem;
-          cursor: pointer;
-        }
-
-        .primary:hover {
-          background: #38b2ac;
-        }
-
-        /* Footer */
-        #footer {
-          text-align: center;
-          padding: 1.5rem;
-          background-color: #1c1c2b;
-          color: #888;
-          font-size: 0.9rem;
-        }
-
-        /* Shivam Animation */
-        .animated-name {
-          display: inline-block;
-          font-size: 2.5rem;
-          animation: fadeScaleIn 1.2s ease-in-out;
-        }
-
-        @keyframes fadeScaleIn {
-          from {
-            opacity: 0;
-            transform: scale(0.8);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-      </style>
-
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script>
-        $(document).ready(function () {
-          // 1. Highlight skill cards on click
-          $(".skill-card").on("click", function () {
-            $(this).toggleClass("highlight-skill");
-          });
-
-          // 2. Animate Resume Download button
-          $(".resume-button").hover(
-            function () {
-              $(this).css({
-                backgroundColor: "#38b2ac",
-                transform: "scale(1.05)",
-              });
-            },
-            function () {
-              $(this).css({
-                backgroundColor: "#4fd1c5",
-                transform: "scale(1)",
-              });
-            }
-          );
-
-          // 4. Animate "Shivam Kumar" on load
-          $("h1").addClass("animated-name");
-
-          // 5. Alert on clicking email
-          $('a[href^="mailto:"]').on("click", function () {
-            alert("Opening your default email client...");
-          });
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".skill-card").on("click", function () {
+          $(this).toggleClass("highlight-skill");
         });
-      </script>
-    </head>
 
-    <body class="is-preload">
-      <div id="wrapper">
-        <header id="header">
-          <div class="logo">
-            <img src="images/mypic.jfif" alt="Profile" />
-            <!-- <span class="icon fa-user"></span> -->
+        $(".resume-button").hover(
+          function () {
+            $(this).css({
+              backgroundColor: "#38b2ac",
+              transform: "scale(1.05)",
+            });
+          },
+          function () {
+            $(this).css({
+              backgroundColor: "#4fd1c5",
+              transform: "scale(1)",
+            });
+          }
+        );
+
+        $("h1").addClass("animated-name");
+
+        $('a[href^="mailto:"]').on("click", function () {
+          alert("Opening your default email client...");
+        });
+      });
+    </script>
+  </head>
+
+  <body class="is-preload">
+    <div id="wrapper">
+      <header id="header">
+        <div class="logo">
+          <img src="images/mypic.jfif" alt="Profile" />
+        </div>
+        <div class="content">
+          <div class="inner">
+            <h1>Shivam Kumar</h1>
+            <p>
+              A passionate Full-Stack Developer with expertise in the MERN Stack
+              and React Native, a Cybersecurity Enthusiast, and a strong
+              problem-solver who enjoys building efficient, scalable, and secure
+              web and mobile applications.
+            </p>
           </div>
-          <div class="content">
-            <div class="inner">
-              <h1>Shivam Kumar</h1>
-              <p>
-                A passionate Full-Stack Developer with expertise in the MERN
-                Stack and React Native, a Cybersecurity Enthusiast, and a strong
-                problem-solver who enjoys building efficient, scalable, and
-                secure web and mobile applications.
-              </p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Your main content like skills, projects, resume, experience, contact goes here -->
+      <div id="main">
+        <!-- Skills -->
+        <article id="skills">
+          <h2 class="major">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <img src="images/reactjs.png" alt="React" />
+              <p>React</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/sql.png" alt="Node.js" />
+              <p>SQL</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download (3).png" alt="MongoDB" />
+              <p>MongoDB</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/expressjs.png" alt="Express" />
+              <p>Express</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/github.jfif" alt="Github" />
+              <p>Github</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download (2).png" alt="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download.png" alt="CSS" />
+              <p>HTML</p>
+            </div>
+            <div class="skill-card">
+              <img src="images/download (1).png" alt="CSS" />
+              <p>CSS</p>
             </div>
           </div>
-          <nav>
-            <ul>
-              <li><a href="#skills">Skills</a></li>
+        </article>
 
-              <li><a href="#work">Projects</a></li>
-              <li><a href="#experience">Experience</a></li>
+        <!-- Resume -->
+        <article id="resume">
+          <h2 class="major">Resume</h2>
+          <div class="resume-section">
+            <p>You can view or download my resume here:</p>
+            <a
+              href="assets/MyResume2.pdf"
+              download="Shivam_Kumar_Resume"
+              class="resume-button"
+            >
+              📄 Download Resume (PDF)
+            </a>
+          </div>
+        </article>
 
-              <li><a href="#resume">Resume</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-
-        <div id="main">
-          <!-- Skills -->
-          <article id="skills">
-            <h2 class="major">Skills</h2>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <img src="images/reactjs.png" alt="React" />
-                <p>React</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/sql.png" alt="Node.js" />
-                <p>SQL</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/download (3).png" alt="MongoDB" />
-                <p>MongoDB</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/expressjs.png" alt="Express" />
-                <p>Express</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/github.jfif" alt="Github" />
-                <p>Github</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/download (2).png" alt="JavaScript" />
-                <p>JavaScript</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/download.png" alt="CSS" />
-                <p>HTML</p>
-              </div>
-              <div class="skill-card">
-                <img src="images/download (1).png" alt="CSS" />
-                <p>CSS</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Resume -->
-          <article id="resume">
-            <h2 class="major">Resume</h2>
-            <div class="resume-section">
-              <p>You can view or download my resume here:</p>
+        <!-- Projects -->
+        <!-- Projects -->
+        <article id="work">
+          <h2 class="major">Projects</h2>
+          <div class="project-grid">
+            <div class="project-card">
               <a
-                href="assets/MyResume2.pdf"
-                download="Shivam_Kumar_Resume"
-                class="resume-button"
+                href="https://tea-with-code.vercel.app/"
+                target="_blank"
+                class="project-link"
               >
-                📄 Download Resume (PDF)
+                <img src="images/lms (2).png" alt="LMS Project" />
+                <h3>Learning Management System</h3>
+                <p>
+                  A full-featured MERN Stack LMS with course creation, Stripe
+                  payment integration, authentication, and responsive UI for
+                  online learning.
+                </p>
               </a>
             </div>
-          </article>
+            <div class="project-card">
+              <a
+                href="https://guestian.onrender.com/"
+                target="_blank"
+                class="project-link"
+              >
+                <img src="images/ride.png" alt="Ride Booking App" />
+                <h3>Ride Booking App</h3>
+                <p>
+                  A React-based animated interface using GSAP for booking rides
+                  with a user-friendly experience.
+                </p>
+              </a>
+            </div>
+            <div class="project-card">
+              <a
+                href="https://bite-buzz-tan.vercel.app/"
+                target="_blank"
+                class="project-link"
+              >
+                <img src="images/food.png" alt="Food-Order" />
+                <h3>BituBuzz</h3>
+                <p>
+                  MERN food delivery and listing application for small
+                  businesses.
+                </p>
+              </a>
+            </div>
+            <div class="project-card">
+              <a
+                href="https://your-timetable-system-link.com"
+                target="_blank"
+                class="project-link"
+              >
+                <img src="images/tt.jfif" alt="Timetable System" />
+                <h3>Timetable Management System</h3>
+                <p>
+                  Admin dashboard with schedule conflict detection and teacher
+                  allocation management.
+                </p>
+              </a>
+            </div>
+          </div>
+        </article>
 
-          <!-- Projects -->
-          <!-- Projects -->
-          <article id="work">
-            <h2 class="major">Projects</h2>
-            <div class="project-grid">
-              <div class="project-card">
-                <a
-                  href="https://tea-with-code.vercel.app/"
-                  target="_blank"
-                  class="project-link"
-                >
-                  <img src="images/lms (2).png" alt="LMS Project" />
-                  <h3>Learning Management System</h3>
-                  <p>
-                    A full-featured MERN Stack LMS with course creation, Stripe
-                    payment integration, authentication, and responsive UI for
-                    online learning.
-                  </p>
-                </a>
+        <!-- Experience -->
+        <article id="experience">
+          <h2 class="major">Experience</h2>
+          <div class="experience-grid">
+            <div class="experience-card">
+              <h3>Software Developer Intern</h3>
+              <p><strong>Company:</strong> Bluestck Fintech</p>
+              <p><strong>Duration:</strong> Jan 2025 – Feb 2025</p>
+            </div>
+            <div class="experience-card">
+              <h3>Backend Developer</h3>
+              <p><strong>Company:</strong> Near</p>
+              <p><strong>Duration:</strong> Feb 2025 – May 2025</p>
+            </div>
+            <div class="experience-card">
+              <h3>Graduate Engineer Trainee</h3>
+              <p><strong>Company:</strong> Mantra Softech</p>
+              <p><strong>Duration:</strong> June 2025 – Present</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact">
+          <h2 class="major">Get in Touch</h2>
+          <form
+            method="post"
+            action="mailto:your-shivamraj7479@example.com"
+            enctype="text/plain"
+          >
+            <div class="fields">
+              <div class="field half">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
               </div>
-              <div class="project-card">
-                <a
-                  href="https://guestian.onrender.com/"
-                  target="_blank"
-                  class="project-link"
-                >
-                  <img src="images/ride.png" alt="Ride Booking App" />
-                  <h3>Ride Booking App</h3>
-                  <p>
-                    A React-based animated interface using GSAP for booking
-                    rides with a user-friendly experience.
-                  </p>
-                </a>
+              <div class="field half">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
               </div>
-              <div class="project-card">
-                <a
-                  href="https://bite-buzz-tan.vercel.app/"
-                  target="_blank"
-                  class="project-link"
-                >
-                  <img src="images/food.png" alt="Food-Order" />
-                  <h3>BituBuzz</h3>
-                  <p>
-                    MERN food delivery and listing application for small
-                    businesses.
-                  </p>
-                </a>
-              </div>
-              <div class="project-card">
-                <a
-                  href="https://your-timetable-system-link.com"
-                  target="_blank"
-                  class="project-link"
-                >
-                  <img src="images/tt.jfif" alt="Timetable System" />
-                  <h3>Timetable Management System</h3>
-                  <p>
-                    Admin dashboard with schedule conflict detection and teacher
-                    allocation management.
-                  </p>
-                </a>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="4"></textarea>
               </div>
             </div>
-          </article>
-
-          <!-- Experience -->
-          <article id="experience">
-            <h2 class="major">Experience</h2>
-            <div class="experience-grid">
-              <div class="experience-card">
-                <h3>Software Developer Intern</h3>
-                <p><strong>Company:</strong> Bluestck Fintech</p>
-                <p><strong>Duration:</strong> Jan 2025 – Feb 2025</p>
-              </div>
-              <div class="experience-card">
-                <h3>Backend Developer</h3>
-                <p><strong>Company:</strong> Near</p>
-                <p><strong>Duration:</strong> Feb 2025 – May 2025</p>
-              </div>
-              <div class="experience-card">
-                <h3>Graduate Engineer Trainee</h3>
-                <p><strong>Company:</strong> Mantra Softech</p>
-                <p><strong>Duration:</strong> June 2025 – Present</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Contact -->
-          <article id="contact">
-            <h2 class="major">Get in Touch</h2>
-            <form
-              method="post"
-              action="mailto:your-shivamraj7479@example.com"
-              enctype="text/plain"
-            >
-              <div class="fields">
-                <div class="field half">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div class="field half">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" />
-                </div>
-                <div class="field">
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" rows="4"></textarea>
-                </div>
-              </div>
-              <ul class="actions">
-                <li>
-                  <input type="submit" value="Send Message" class="primary" />
-                </li>
-                <li><input type="reset" value="Reset" /></li>
-              </ul>
-            </form>
-            <ul class="icons">
+            <ul class="actions">
               <li>
-                <a
-                  href="https://twitter.com/yourhandle"
-                  class="icon brands fa-twitter"
-                  ><span class="label">Twitter</span></a
-                >
+                <input type="submit" value="Send Message" class="primary" />
               </li>
-              <li>
-                <a
-                  href="https://facebook.com/yourhandle"
-                  class="icon brands fa-facebook-f"
-                  ><span class="label">Facebook</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/yourhandle"
-                  class="icon brands fa-instagram"
-                  ><span class="label">Instagram</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Badshahshvm"
-                  class="icon brands fa-github"
-                  ><span class="label">GitHub</span></a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:your-shivamraj7479@.com"
-                  class="icon solid fa-envelope"
-                  ><span class="label">Email</span></a
-                >
-              </li>
+              <li><input type="reset" value="Reset" /></li>
             </ul>
-          </article>
-        </div>
-
-        <footer id="footer">
-          <p class="copyright">&copy; 2025 Shivam Kumar</p>
-        </footer>
+          </form>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://twitter.com/yourhandle"
+                class="icon brands fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://facebook.com/yourhandle"
+                class="icon brands fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/yourhandle"
+                class="icon brands fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Badshahshvm"
+                class="icon brands fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:your-shivamraj7479@.com"
+                class="icon solid fa-envelope"
+                ><span class="label">Email</span></a
+              >
+            </li>
+          </ul>
+        </article>
       </div>
 
-      <div id="bg"></div>
+      <footer id="footer">
+        <p class="copyright">&copy; 2025 Shivam Kumar</p>
+      </footer>
+    </div>
 
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
-    </body>
-  </html>
+    <div id="bg"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
