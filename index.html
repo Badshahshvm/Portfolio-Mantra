@@ -33,13 +33,15 @@
 
         /* Logo Image */
         .logo img {
-          width: 70px;
-          height: 70px;
+          width: 82px;
+          height: 80px;
           border-radius: 50%;
           object-fit: cover;
-          border: 2px solid #4fd1c5;
+          border: 2px none;
           box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
           transition: transform 0.3s;
+
+          margin-bottom: 15px;
         }
 
         .logo img:hover {
@@ -265,7 +267,8 @@
       <div id="wrapper">
         <header id="header">
           <div class="logo">
-            <span class="icon fa-user"></span>
+            <img src="images/mypic.jfif" alt="Profile" />
+            <!-- <span class="icon fa-user"></span> -->
           </div>
           <div class="content">
             <div class="inner">
@@ -281,10 +284,10 @@
           <nav>
             <ul>
               <li><a href="#skills">Skills</a></li>
-              <li><a href="#education">Education</a></li>
+
               <li><a href="#work">Projects</a></li>
               <li><a href="#experience">Experience</a></li>
-              <li><a href="#about">About</a></li>
+
               <li><a href="#resume">Resume</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -331,27 +334,6 @@
             </div>
           </article>
 
-          <!-- Education -->
-          <article id="education">
-            <h2 class="major">Education</h2>
-            <div class="education-grid">
-              <div class="education-card">
-                <h3>B.Tech in Information Technology</h3>
-                <h4>M.I.T Muzaffarpur</h4>
-                <p>CGPA: &nbsp; 7.94</p>
-              </div>
-              <div class="education-card">
-                <h3>Intermediate (12th)</h3>
-                <h4>K.L.S College</h4>
-                <p>Percentage: 84.2%</p>
-              </div>
-              <div class="education-card">
-                <h3>Matriculation (10th)</h3>
-                <h4>Bapu High School</h4>
-                <p>Percentage: 74%</p>
-              </div>
-            </div>
-          </article>
           <!-- Resume -->
           <article id="resume">
             <h2 class="major">Resume</h2>
@@ -453,43 +435,6 @@
               </div>
             </div>
           </article>
-          <!-- About -->
-          <article id="about">
-            <h2 class="major">About Me</h2>
-            <span class="image main">
-              <img src="images/mypic.jfif" alt="About Me" class="about-img" />
-            </span>
-            <p>
-              My name is Shivam Kumar, an IT graduate from Muzaffarpur Institute
-              of Technology. I am passionate about web and mobile development,
-              cybersecurity, and building real-world solutions.
-            </p>
-            <p><strong>Technical Skills:</strong></p>
-            <ul>
-              <li>Frontend: React, Tailwind CSS</li>
-              <li>Backend: Node.js, Express.js</li>
-              <li>Database: MongoDB</li>
-              <li>Mobile Development: React Native (basic knowledge)</li>
-              <li>Tools & Practices: Git, REST APIs, MVC architecture</li>
-            </ul>
-            <p><strong>Projects:</strong></p>
-            <ul>
-              <li>Tour Booking App</li>
-              <li>Timetable Management System</li>
-              <li>Student Problem-Solving Portal</li>
-              <li>Social Media Platform with AR/VR integration</li>
-            </ul>
-            <p><strong>Other Interests & Strengths:</strong></p>
-            <ul>
-              <li>Cybersecurity fundamentals and ethical hacking</li>
-              <li>
-                Active LeetCode user with recognition for coding challenges
-              </li>
-              <li>Strong problem-solving and debugging skills</li>
-              <li>Goal-oriented and dedicated to full-stack development</li>
-              <li>Focus on building secure and scalable digital solutions</li>
-            </ul>
-          </article>
 
           <!-- Contact -->
           <article id="contact">
@@ -521,17 +466,23 @@
               </ul>
             </form>
             <ul class="icons">
-              
               <li>
                 <a
-                  href="https://www.facebook.com/profile.php?id=100007587432616&mibextid=JRoKGi"
+                  href="https://twitter.com/yourhandle"
+                  class="icon brands fa-twitter"
+                  ><span class="label">Twitter</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/yourhandle"
                   class="icon brands fa-facebook-f"
                   ><span class="label">Facebook</span></a
                 >
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/badshah_shvm?igsh=bmcxM3ZpajFmYzU="
+                  href="https://instagram.com/yourhandle"
                   class="icon brands fa-instagram"
                   ><span class="label">Instagram</span></a
                 >
